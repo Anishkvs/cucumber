@@ -21,3 +21,15 @@ Examples:
 | userName | password |
 | test              | 1234 |
 | test2            | 1234545 |
+
+@RegressionTest
+Scenario: User page default sign Up
+
+Given User is on pratice landing page
+When User 	SignUp into application
+| anish |
+|Kumar |
+|test@gmail.com |
+| 9843000000 |
+Then HomePage is displayed1
+And Cards are displayed

@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+
+import java.util.List;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -33,4 +36,25 @@ public class MainSteps {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println("Card is displayed");
 	}
+	
+	@Given("User is on pratice landing page")
+	public void user_is_on_pratice_landing_page() {
+	   System.out.println("landing page");
+	}
+	@When("User 	SignUp into application")
+	public void user_sign_up_into_application(List<String> data) {
+	
+		System.out.println(data.get(0));
+		System.out.println(data.get(1));
+		System.out.println(data.get(2));
+		System.out.println(data.get(3));
+
+	}
+
+@Then("HomePage is displayed1")
+public void home_page_is_displayed1() {
+    // Write code here that turns the phrase above into concrete actions
+}
+
+		
 }

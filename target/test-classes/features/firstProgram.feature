@@ -1,7 +1,12 @@
 
 Feature: Application Login
 
-@RegressionTest
+Background: 
+Given setup the entries in database
+When launch the browser from config variables
+And Hit the homepage URl of banking site
+
+@Smoke
 Scenario Outline: Admin page default login
 
 Given User is on the Netbanking  landing page
@@ -9,7 +14,7 @@ When User login into the application with "<userName>" and "<password>"
 Then Home page is displayed
 And Cards are displayed
 
-@RegressionTest
+@RegressionTest @Smoke 
 Scenario: Regular Expression, Admin page default login
 
 Given User is on the Netbanking  landing page
@@ -22,7 +27,7 @@ Examples:
 | test              | 1234 |
 | test2            | 1234545 |
 
-@RegressionTest
+@MobileTest 
 Scenario: User page default sign Up
 
 Given User is on pratice landing page

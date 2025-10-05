@@ -56,5 +56,16 @@ public void home_page_is_displayed1() {
     // Write code here that turns the phrase above into concrete actions
 }
 
-		
+		@Given("setup the entries in database")
+		public void setupEntries() {
+			System.out.println("******SetUp********");
+		}
+		@When("launch the browser from config variables")
+		public void launchBrowser() {
+			System.out.println("******launchBrowser********");
+		}
+		@Then("Hit the homepage URl of banking site")
+		public void HitUrls() {
+			System.out.println("******HitUrls********");
+		}
 }
